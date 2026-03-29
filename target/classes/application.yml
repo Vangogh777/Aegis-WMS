@@ -25,6 +25,11 @@ spring:
         spring.json.trusted.packages: "*"
     listener:
       missing-topics-fatal: false
+  # 禁用Spring Security默认用户
+  security:
+    user:
+      name: unused
+      password: unused
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml

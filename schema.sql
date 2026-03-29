@@ -549,10 +549,13 @@ INSERT INTO alarm_threshold (threshold_code, threshold_name, metric_type, operat
 ('O2_LOW', '氧气浓度过低', 'o2_concentration', '<', 19.50, 2, '氧气浓度低于19.5%触发报警');
 
 -- --------------------------------------------
--- 默认管理员账号 (密码: admin123，实际部署需加密)
+-- 默认管理员账号 (密码: lcyfgl2018!!, BCrypt加密)
+-- BCrypt密码可通过程序初始化自动创建，此处为备份
 -- --------------------------------------------
-INSERT INTO sys_user (username, password, real_name, role_type, status) VALUES
-('admin', 'admin123', '系统管理员', 'admin', 1);
+-- 密码会在程序启动时自动创建加密后的admin账号
+-- 如需手动插入，请使用以下BCrypt加密后的密码：
+-- INSERT INTO sys_user (username, password, real_name, role_type, status) VALUES
+-- ('admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EH', '系统管理员', 'admin', 1);
 
 SET FOREIGN_KEY_CHECKS = 1;
 

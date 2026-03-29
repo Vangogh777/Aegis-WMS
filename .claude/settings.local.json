@@ -38,7 +38,12 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git rm:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(pkill -f spring-boot:run)",
+      "Bash(export JAVA_HOME=/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home mvn compile -DskipTests)"
     ]
   }
 }
