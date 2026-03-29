@@ -43,7 +43,9 @@
       "Bash(git remote:*)",
       "Bash(git push:*)",
       "Bash(pkill -f spring-boot:run)",
-      "Bash(export JAVA_HOME=/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home mvn compile -DskipTests)"
+      "Bash(export JAVA_HOME=/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home mvn compile -DskipTests)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }

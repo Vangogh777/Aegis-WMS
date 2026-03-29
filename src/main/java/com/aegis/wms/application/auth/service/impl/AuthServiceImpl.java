@@ -86,7 +86,7 @@ public class AuthServiceImpl implements AuthService {
 
         User admin = new User();
         admin.setUsername("admin");
-        admin.setPassword(passwordEncoder.encode("lcyfgl2018!!"));
+        admin.setPassword(passwordEncoder.encode("lcyfgl2018"));
         admin.setRealName("系统管理员");
         admin.setRoleType("admin");
         admin.setPhone("13800138000");

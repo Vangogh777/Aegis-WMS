@@ -549,7 +549,7 @@ INSERT INTO alarm_threshold (threshold_code, threshold_name, metric_type, operat
 ('O2_LOW', '氧气浓度过低', 'o2_concentration', '<', 19.50, 2, '氧气浓度低于19.5%触发报警');
 
 -- --------------------------------------------
--- 默认管理员账号 (密码: lcyfgl2018!!, BCrypt加密)
+-- 默认管理员账号 (密码: lcyfgl2018, BCrypt加密)
 -- BCrypt密码可通过程序初始化自动创建，此处为备份
 -- --------------------------------------------
 -- 密码会在程序启动时自动创建加密后的admin账号
