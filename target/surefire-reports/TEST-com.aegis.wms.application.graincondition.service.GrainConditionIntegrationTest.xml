@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="10.887" tests="11" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/test-classes:/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/classes:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vangogh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vangogh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/vangogh/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/vangogh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/vangogh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/vangogh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vangogh/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.5/mybatis-plus-spring-boot3-starter-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus/3.5.5/mybatis-plus-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-core/3.5.5/mybatis-plus-core-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-annotation/3.5.5/mybatis-plus-annotation-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-extension/3.5.5/mybatis-plus-extension-3.5.5.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar:/Users/vangogh/.m2/repository/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis-spring/3.0.3/mybatis-spring-3.0.3.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/mybatis-plus-spring-boot-autoconfigure-3.5.5.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/vangogh/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/vangogh/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/vangogh/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/vangogh/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/vangogh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/vangogh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/vangogh/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/vangogh/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/vangogh/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/vangogh/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/vangogh/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/vangogh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/vangogh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/vangogh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/vangogh/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vangogh/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vangogh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/vangogh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/Users/vangogh/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/Users/vangogh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/vangogh/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/Users/vangogh/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/Users/vangogh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/vangogh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/vangogh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire/surefirebooter-20260329074708171_3.jar /Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire 2026-03-29T07-47-07_924-jvmRun1 surefire-20260329074708171_1tmp surefire_0-20260329074708171_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/test-classes:/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/classes:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vangogh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vangogh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/vangogh/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/vangogh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/vangogh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/vangogh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vangogh/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.5/mybatis-plus-spring-boot3-starter-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus/3.5.5/mybatis-plus-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-core/3.5.5/mybatis-plus-core-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-annotation/3.5.5/mybatis-plus-annotation-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-extension/3.5.5/mybatis-plus-extension-3.5.5.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar:/Users/vangogh/.m2/repository/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis-spring/3.0.3/mybatis-spring-3.0.3.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/mybatis-plus-spring-boot-autoconfigure-3.5.5.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/vangogh/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/vangogh/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/vangogh/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/vangogh/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/vangogh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/vangogh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/vangogh/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/vangogh/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/vangogh/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/vangogh/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/vangogh/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/vangogh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/vangogh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/vangogh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/vangogh/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vangogh/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vangogh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/vangogh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/Users/vangogh/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/Users/vangogh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/vangogh/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/Users/vangogh/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/Users/vangogh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/vangogh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/vangogh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/vangogh"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire/surefirebooter-20260329074708171_3.jar"/>
+    <property name="user.script" value="Hans"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="20.0.1+9-29"/>
+    <property name="user.name" value="vangogh"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.6.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/vangogh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/bc/l2170sps3916y58v8pqvj5000000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="user.dir" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="78719"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/vangogh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="20.0.1+9-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="testCreateAndQueryThreshold" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="2.024">
+    <system-out><![CDATA[07:47:09.899 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest]: GrainConditionIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:47:10.183 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aegis.wms.AegisWmsApplication for test class com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-03-29T07:47:10.992+08:00  INFO 78719 --- [           main] .a.w.a.g.s.GrainConditionIntegrationTest : Starting GrainConditionIntegrationTest using Java 20.0.1 with PID 78719 (started by vangogh in /Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储)
+2026-03-29T07:47:10.993+08:00 DEBUG 78719 --- [           main] .a.w.a.g.s.GrainConditionIntegrationTest : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-03-29T07:47:10.994+08:00  INFO 78719 --- [           main] .a.w.a.g.s.GrainConditionIntegrationTest : The following 1 profile is active: "test"
+2026-03-29T07:47:12.954+08:00  INFO 78719 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-29T07:47:12.958+08:00  INFO 78719 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-29T07:47:13.041+08:00  INFO 78719 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 0 Redis repository interfaces.
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Initialization Sequence datacenterId:15 workerId:26
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.5 
+2026-03-29T07:47:17.446+08:00  INFO 78719 --- [           main] .a.w.a.g.s.GrainConditionIntegrationTest : Started GrainConditionIntegrationTest in 7.069 seconds (process running for 9.117)
+2026-03-29T07:47:17.509+08:00  INFO 78719 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-29T07:47:17.743+08:00  INFO 78719 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b76251c
+2026-03-29T07:47:17.745+08:00  INFO 78719 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+JDBC Connection [HikariProxyConnection@1243354278 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: TH_TEST_1774741639144(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TH_TEST_1774741639144(String), 测试阈值-CO2超限(String), co2_concentration(String), >(String), 5.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE id=?
+==> Parameters: 30(Long)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 30, TH_TEST_1774741639144, 测试阈值-CO2超限, co2_concentration, >, 5.00, 2, 1, null, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+✅ 报警阈值创建查询成功: 测试阈值-CO2超限
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24888d8b]
+]]></system-out>
+  </testcase>
+  <testcase name="testListAllEnabledThresholds" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.065">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+JDBC Connection [HikariProxyConnection@1163979541 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: TH_LIST_TEST_1774741639554(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TH_LIST_TEST_1774741639554(String), 测试阈值-查询列表(String), max_grain_temp(String), >(String), 30.00(BigDecimal), 1(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 4, CO2_5000, CO2浓度超限, co2_concentration, >, 5.00, 2, 1, CO2浓度超过5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 5, O2_LOW, 氧气浓度过低, o2_concentration, <, 19.50, 2, 1, 氧气浓度低于19.5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 31, TH_LIST_TEST_1774741639554, 测试阈值-查询列表, max_grain_temp, >, 30.00, 1, 1, null, null, null
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+✅ 查询启用阈值成功，数量: 6
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d863bb]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndQueryRecord" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.087">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+JDBC Connection [HikariProxyConnection@850958638 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741639624(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741639624(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 173(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 173, GC_TEST_WH_1774741639624, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 173(Long), GC_TEST_BIN_1774741639624(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 173(Long), GC_TEST_BIN_1774741639624(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741639624(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741639624(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 106(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 106, 173, GC_TEST_BIN_1774741639624, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639661(String), 173(Long), 106(Long), 2026-03-29(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), 集成测试粮情记录(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+2026-03-29T07:47:19.682+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.682+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639661
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE id=?
+==> Parameters: 33(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 33, GC1774741639661, 173, 106, 2026-03-29, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, 集成测试粮情记录, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 173(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 173, GC_TEST_WH_1774741639624, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 106(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 106, 173, GC_TEST_BIN_1774741639624, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec] from current transaction
+==>  Preparing: SELECT id,record_id,file_name,file_path,file_type,file_size,upload_time FROM grain_condition_attachment WHERE (record_id = ?)
+==> Parameters: 33(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+✅ 粮情记录创建成功，记录编号: GC1774741639661
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a6409ec]
+]]></system-out>
+  </testcase>
+  <testcase name="testPageRecords" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.165">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+JDBC Connection [HikariProxyConnection@1023063405 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741639717(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741639717(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 174(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 174, GC_TEST_WH_1774741639717, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 174(Long), GC_TEST_BIN_1774741639717(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 174(Long), GC_TEST_BIN_1774741639717(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741639717(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741639717(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 107(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 107, 174, GC_TEST_BIN_1774741639717, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639742(String), 174(Long), 107(Long), 2026-03-28(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), 分页测试记录_1(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+2026-03-29T07:47:19.746+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.746+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639742
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 107(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 107, 174, GC_TEST_BIN_1774741639717, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639749(String), 174(Long), 107(Long), 2026-03-27(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), 分页测试记录_2(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+2026-03-29T07:47:19.755+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.755+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639749
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 107(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 107, 174, GC_TEST_BIN_1774741639717, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639758(String), 174(Long), 107(Long), 2026-03-26(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), 分页测试记录_3(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+2026-03-29T07:47:19.762+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.762+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639758
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT COUNT(*) AS total FROM grain_condition_record WHERE (warehouse_id = ? AND bin_id = ?)
+==> Parameters: 174(Long), 107(Long)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE (warehouse_id = ? AND bin_id = ?) ORDER BY record_date DESC LIMIT ?
+==> Parameters: 174(Long), 107(Long), 10(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 34, GC1774741639742, 174, 107, 2026-03-28, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, 分页测试记录_1, manual, 1, 系统, null, null
+<==        Row: 35, GC1774741639749, 174, 107, 2026-03-27, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, 分页测试记录_2, manual, 1, 系统, null, null
+<==        Row: 36, GC1774741639758, 174, 107, 2026-03-26, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, 分页测试记录_3, manual, 1, 系统, null, null
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 174(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 174, GC_TEST_WH_1774741639717, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 107(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 107, 174, GC_TEST_BIN_1774741639717, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6] from current transaction
+==>  Preparing: SELECT id,record_id,file_name,file_path,file_type,file_size,upload_time FROM grain_condition_attachment WHERE (record_id IN (?,?,?))
+==> Parameters: 34(Long), 35(Long), 36(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+✅ 粮情记录分页查询成功，总数: 3
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751baf6]
+]]></system-out>
+  </testcase>
+  <testcase name="testQueryByDateRange" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.118">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+JDBC Connection [HikariProxyConnection@156954340 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741639885(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741639885(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 175(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 175, GC_TEST_WH_1774741639885, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 175(Long), GC_TEST_BIN_1774741639885(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 175(Long), GC_TEST_BIN_1774741639885(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741639885(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741639885(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 108(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 108, 175, GC_TEST_BIN_1774741639885, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639899(String), 175(Long), 108(Long), 2026-03-29(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+2026-03-29T07:47:19.900+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.902+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639899
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 108(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 108, 175, GC_TEST_BIN_1774741639885, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741639904(String), 175(Long), 108(Long), 2026-03-28(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+2026-03-29T07:47:19.905+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:19.906+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741639904
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT COUNT(*) AS total FROM grain_condition_record WHERE (warehouse_id = ? AND bin_id = ? AND record_date >= ? AND record_date <= ?)
+==> Parameters: 175(Long), 108(Long), 2026-03-29(LocalDate), 2026-03-29(LocalDate)
+<==    Columns: total
+<==        Row: 1
+<==      Total: 1
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE (warehouse_id = ? AND bin_id = ? AND record_date >= ? AND record_date <= ?) ORDER BY record_date DESC LIMIT ?
+==> Parameters: 175(Long), 108(Long), 2026-03-29(LocalDate), 2026-03-29(LocalDate), 10(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 37, GC1774741639899, 175, 108, 2026-03-29, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 175(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 175, GC_TEST_WH_1774741639885, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 108(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 108, 175, GC_TEST_BIN_1774741639885, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93] from current transaction
+==>  Preparing: SELECT id,record_id,file_name,file_path,file_type,file_size,upload_time FROM grain_condition_attachment WHERE (record_id IN (?))
+==> Parameters: 37(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+✅ 按日期范围查询成功，今日记录数: 1
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c75c93]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetTrend" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.114">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+JDBC Connection [HikariProxyConnection@1811698326 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640005(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640005(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 176(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 176, GC_TEST_WH_1774741640005, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 176(Long), GC_TEST_BIN_1774741640005(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 176(Long), GC_TEST_BIN_1774741640005(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640005(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640005(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 109(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 109, 176, GC_TEST_BIN_1774741640005, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640042(String), 176(Long), 109(Long), 2026-03-29(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 22.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 24.00(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+2026-03-29T07:47:20.046+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.046+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640042
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 109(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 109, 176, GC_TEST_BIN_1774741640005, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640049(String), 176(Long), 109(Long), 2026-03-28(LocalDate), 21.00(BigDecimal), 60.00(BigDecimal), 23.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 25.00(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+2026-03-29T07:47:20.053+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.053+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640049
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 109(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 109, 176, GC_TEST_BIN_1774741640005, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640060(String), 176(Long), 109(Long), 2026-03-27(LocalDate), 22.00(BigDecimal), 60.00(BigDecimal), 24.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 26.00(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+2026-03-29T07:47:20.062+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.063+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640060
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 109(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 109, 176, GC_TEST_BIN_1774741640005, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640065(String), 176(Long), 109(Long), 2026-03-26(LocalDate), 23.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 27.00(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+2026-03-29T07:47:20.067+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.067+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640065
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 109(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 109, 176, GC_TEST_BIN_1774741640005, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640077(String), 176(Long), 109(Long), 2026-03-25(LocalDate), 24.00(BigDecimal), 60.00(BigDecimal), 26.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 28.00(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+2026-03-29T07:47:20.082+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.083+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640077
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE (bin_id = ? AND record_date >= ? AND record_date <= ?) ORDER BY record_date ASC
+==> Parameters: 109(Long), 2026-03-24(LocalDate), 2026-03-29(LocalDate)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 43, GC1774741640077, 176, 109, 2026-03-25, 24.00, 60.00, 26.00, 55.00, 32.00, 28.00, 28.00, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==        Row: 42, GC1774741640065, 176, 109, 2026-03-26, 23.00, 60.00, 25.00, 55.00, 32.00, 28.00, 27.00, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==        Row: 41, GC1774741640060, 176, 109, 2026-03-27, 22.00, 60.00, 24.00, 55.00, 32.00, 28.00, 26.00, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==        Row: 40, GC1774741640049, 176, 109, 2026-03-28, 21.00, 60.00, 23.00, 55.00, 32.00, 28.00, 25.00, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==        Row: 39, GC1774741640042, 176, 109, 2026-03-29, 20.00, 60.00, 22.00, 55.00, 32.00, 28.00, 24.00, NONE, null, 20.50, 0.50, 14.00, null, manual, 1, 系统, null, null
+<==      Total: 5
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+✅ 趋势数据查询成功，记录数: 5
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fe37d27]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetLatest" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.063">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+JDBC Connection [HikariProxyConnection@2111326114 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640124(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640124(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 177(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 177, GC_TEST_WH_1774741640124, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 177(Long), GC_TEST_BIN_1774741640124(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 177(Long), GC_TEST_BIN_1774741640124(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640124(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640124(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 110(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 110, 177, GC_TEST_BIN_1774741640124, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640148(String), 177(Long), 110(Long), 2026-03-29(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 32.00(BigDecimal), 28.00(BigDecimal), 30.50(BigDecimal), NONE(String), 20.50(BigDecimal), 0.50(BigDecimal), 14.00(BigDecimal), 最新记录测试(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+2026-03-29T07:47:20.153+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.154+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640148
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE (bin_id = ?) ORDER BY record_date DESC LIMIT 1
+==> Parameters: 110(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 44, GC1774741640148, 177, 110, 2026-03-29, 20.00, 60.00, 25.00, 55.00, 32.00, 28.00, 30.50, NONE, null, 20.50, 0.50, 14.00, 最新记录测试, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 177(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 177, GC_TEST_WH_1774741640124, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 110(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 110, 177, GC_TEST_BIN_1774741640124, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5] from current transaction
+==>  Preparing: SELECT id,record_id,file_name,file_path,file_type,file_size,upload_time FROM grain_condition_attachment WHERE (record_id = ?)
+==> Parameters: 44(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+✅ 查询最新粮情成功: 2026-03-29
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c7607e5]
+]]></system-out>
+  </testcase>
+  <testcase name="testAlarmTriggered" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.089">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+JDBC Connection [HikariProxyConnection@2088857414 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640188(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640188(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 178(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 178, GC_TEST_WH_1774741640188, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 178(Long), GC_TEST_BIN_1774741640188(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 178(Long), GC_TEST_BIN_1774741640188(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640188(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640188(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 111(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 111, 178, GC_TEST_BIN_1774741640188, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640209(String), 178(Long), 111(Long), 2026-03-29(LocalDate), 20.00(BigDecimal), 60.00(BigDecimal), 25.00(BigDecimal), 55.00(BigDecimal), 30.00(BigDecimal), 25.00(BigDecimal), 27.50(BigDecimal), NONE(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+2026-03-29T07:47:20.211+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.211+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640209
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE id=?
+==> Parameters: 45(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 45, GC1774741640209, 178, 111, 2026-03-29, 20.00, 60.00, 25.00, 55.00, 30.00, 25.00, 27.50, NONE, null, null, null, null, null, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+2026-03-29T07:47:20.213+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 开始检测粮情报警, recordId=45
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 4, CO2_5000, CO2浓度超限, co2_concentration, >, 5.00, 2, 1, CO2浓度超过5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 5, O2_LOW, 氧气浓度过低, o2_concentration, <, 19.50, 2, 1, 氧气浓度低于19.5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 37, GC_TEST_TH_1774741640188, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640224(String), 178(Long), 111(Long), 45(Long), 1(Long), max_grain_temp(String), 30.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：30.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+2026-03-29T07:47:20.230+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 最高粮温超28度 > 28.00, 实际值: 30.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640230(String), 178(Long), 111(Long), 45(Long), 3(Long), avg_grain_temp(String), 27.50(BigDecimal), 25.00(BigDecimal), 1(Integer), 平均粮温>25.00℃，当前值：27.50℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+2026-03-29T07:47:20.233+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 平均粮温超25度 > 25.00, 实际值: 27.50
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640234(String), 178(Long), 111(Long), 45(Long), 37(Long), max_grain_temp(String), 30.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：30.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+2026-03-29T07:47:20.242+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 测试-最高粮温超28度 > 28.00, 实际值: 30.00
+2026-03-29T07:47:20.242+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警检测完成, recordId=45
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,alarm_no,warehouse_id,bin_id,record_id,threshold_id,metric_type,metric_value,threshold_value,alarm_level,alarm_content,status,handler_id,handler_name,handle_time,handle_remark,create_time FROM alarm_record WHERE (warehouse_id = ? AND status = ?) ORDER BY alarm_level DESC,create_time DESC
+==> Parameters: 178(Long), 0(Integer)
+<==    Columns: id, alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, handler_id, handler_name, handle_time, handle_remark, create_time
+<==        Row: 11, AL1774741640224, 178, 111, 45, 1, max_grain_temp, 30.00, 28.00, 2, 最高粮温>28.00℃，当前值：30.00℃, 0, null, null, null, null, null
+<==        Row: 13, AL1774741640234, 178, 111, 45, 37, max_grain_temp, 30.00, 28.00, 2, 最高粮温>28.00℃，当前值：30.00℃, 0, null, null, null, null, null
+<==        Row: 12, AL1774741640230, 178, 111, 45, 3, avg_grain_temp, 27.50, 25.00, 1, 平均粮温>25.00℃，当前值：27.50℃, 0, null, null, null, null, null
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 178(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 178, GC_TEST_WH_1774741640188, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 111(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 111, 178, GC_TEST_BIN_1774741640188, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE id IN ( ? , ? , ? )
+==> Parameters: 1(Long), 37(Long), 3(Long)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 37, GC_TEST_TH_1774741640188, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+✅ 报警触发成功: 最高粮温>28.00℃，当前值：30.00℃
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@235dacd7]
+]]></system-out>
+  </testcase>
+  <testcase name="testNoAlarmTriggered" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.035">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+JDBC Connection [HikariProxyConnection@83375833 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640279(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640279(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 179(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 179, GC_TEST_WH_1774741640279, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 179(Long), GC_TEST_BIN_1774741640279(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 179(Long), GC_TEST_BIN_1774741640279(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640279(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640279(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 112(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 112, 179, GC_TEST_BIN_1774741640279, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640290(String), 179(Long), 112(Long), 2026-03-29(LocalDate), 18.00(BigDecimal), 60.00(BigDecimal), 22.00(BigDecimal), 55.00(BigDecimal), 25.00(BigDecimal), 20.00(BigDecimal), 22.00(BigDecimal), NONE(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+2026-03-29T07:47:20.291+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.292+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640290
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE id=?
+==> Parameters: 46(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 46, GC1774741640290, 179, 112, 2026-03-29, 18.00, 60.00, 22.00, 55.00, 25.00, 20.00, 22.00, NONE, null, null, null, null, null, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+2026-03-29T07:47:20.293+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 开始检测粮情报警, recordId=46
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 4, CO2_5000, CO2浓度超限, co2_concentration, >, 5.00, 2, 1, CO2浓度超过5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 5, O2_LOW, 氧气浓度过低, o2_concentration, <, 19.50, 2, 1, 氧气浓度低于19.5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 38, GC_TEST_TH_1774741640279, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+2026-03-29T07:47:20.303+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警检测完成, recordId=46
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4] from current transaction
+==>  Preparing: SELECT id,alarm_no,warehouse_id,bin_id,record_id,threshold_id,metric_type,metric_value,threshold_value,alarm_level,alarm_content,status,handler_id,handler_name,handle_time,handle_remark,create_time FROM alarm_record WHERE (warehouse_id = ? AND status = ?) ORDER BY alarm_level DESC,create_time DESC
+==> Parameters: 179(Long), 0(Integer)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+✅ 正常温度未触发报警
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32675dd4]
+]]></system-out>
+  </testcase>
+  <testcase name="testHandleAlarm" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.084">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+JDBC Connection [HikariProxyConnection@2008027686 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640314(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640314(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 180(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 180, GC_TEST_WH_1774741640314, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 180(Long), GC_TEST_BIN_1774741640314(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 180(Long), GC_TEST_BIN_1774741640314(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640314(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640314(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 113(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 113, 180, GC_TEST_BIN_1774741640314, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640328(String), 180(Long), 113(Long), 2026-03-29(LocalDate), 32.00(BigDecimal), 28.00(BigDecimal), 30.00(BigDecimal), NONE(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.330+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.330+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640328
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE id=?
+==> Parameters: 47(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 47, GC1774741640328, 180, 113, 2026-03-29, null, null, null, null, 32.00, 28.00, 30.00, NONE, null, null, null, null, null, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.334+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 开始检测粮情报警, recordId=47
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 4, CO2_5000, CO2浓度超限, co2_concentration, >, 5.00, 2, 1, CO2浓度超过5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 5, O2_LOW, 氧气浓度过低, o2_concentration, <, 19.50, 2, 1, 氧气浓度低于19.5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 39, GC_TEST_TH_1774741640314, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640339(String), 180(Long), 113(Long), 47(Long), 1(Long), max_grain_temp(String), 32.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：32.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.341+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 最高粮温超28度 > 28.00, 实际值: 32.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640343(String), 180(Long), 113(Long), 47(Long), 2(Long), max_grain_temp(String), 32.00(BigDecimal), 30.00(BigDecimal), 3(Integer), 最高粮温>30.00℃，当前值：32.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.345+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 最高粮温超30度 > 30.00, 实际值: 32.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640346(String), 180(Long), 113(Long), 47(Long), 3(Long), avg_grain_temp(String), 30.00(BigDecimal), 25.00(BigDecimal), 1(Integer), 平均粮温>25.00℃，当前值：30.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.348+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 平均粮温超25度 > 25.00, 实际值: 30.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640348(String), 180(Long), 113(Long), 47(Long), 39(Long), max_grain_temp(String), 32.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：32.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+2026-03-29T07:47:20.350+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 测试-最高粮温超28度 > 28.00, 实际值: 32.00
+2026-03-29T07:47:20.351+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警检测完成, recordId=47
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,alarm_no,warehouse_id,bin_id,record_id,threshold_id,metric_type,metric_value,threshold_value,alarm_level,alarm_content,status,handler_id,handler_name,handle_time,handle_remark,create_time FROM alarm_record WHERE (warehouse_id = ? AND status = ?) ORDER BY alarm_level DESC,create_time DESC
+==> Parameters: 180(Long), 0(Integer)
+<==    Columns: id, alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, handler_id, handler_name, handle_time, handle_remark, create_time
+<==        Row: 15, AL1774741640343, 180, 113, 47, 2, max_grain_temp, 32.00, 30.00, 3, 最高粮温>30.00℃，当前值：32.00℃, 0, null, null, null, null, null
+<==        Row: 14, AL1774741640339, 180, 113, 47, 1, max_grain_temp, 32.00, 28.00, 2, 最高粮温>28.00℃，当前值：32.00℃, 0, null, null, null, null, null
+<==        Row: 17, AL1774741640348, 180, 113, 47, 39, max_grain_temp, 32.00, 28.00, 2, 最高粮温>28.00℃，当前值：32.00℃, 0, null, null, null, null, null
+<==        Row: 16, AL1774741640346, 180, 113, 47, 3, avg_grain_temp, 30.00, 25.00, 1, 平均粮温>25.00℃，当前值：30.00℃, 0, null, null, null, null, null
+<==      Total: 4
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 180(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 180, GC_TEST_WH_1774741640314, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 113(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 113, 180, GC_TEST_BIN_1774741640314, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE id IN ( ? , ? , ? , ? )
+==> Parameters: 2(Long), 1(Long), 39(Long), 3(Long)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 39, GC_TEST_TH_1774741640314, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 4
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,alarm_no,warehouse_id,bin_id,record_id,threshold_id,metric_type,metric_value,threshold_value,alarm_level,alarm_content,status,handler_id,handler_name,handle_time,handle_remark,create_time FROM alarm_record WHERE id=?
+==> Parameters: 15(Long)
+<==    Columns: id, alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, handler_id, handler_name, handle_time, handle_remark, create_time
+<==        Row: 15, AL1774741640343, 180, 113, 47, 2, max_grain_temp, 32.00, 30.00, 3, 最高粮温>30.00℃，当前值：32.00℃, 0, null, null, null, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: UPDATE alarm_record SET alarm_no=?, warehouse_id=?, bin_id=?, record_id=?, threshold_id=?, metric_type=?, metric_value=?, threshold_value=?, alarm_level=?, alarm_content=?, status=?, handler_id=?, handler_name=?, handle_time=?, handle_remark=? WHERE id=?
+==> Parameters: AL1774741640343(String), 180(Long), 113(Long), 47(Long), 2(Long), max_grain_temp(String), 32.00(BigDecimal), 30.00(BigDecimal), 3(Integer), 最高粮温>30.00℃，当前值：32.00℃(String), 1(Integer), 1(Long), 系统(String), 2026-03-29T07:47:20.374095(LocalDateTime), 已确认，安排处理(String), 15(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,alarm_no,warehouse_id,bin_id,record_id,threshold_id,metric_type,metric_value,threshold_value,alarm_level,alarm_content,status,handler_id,handler_name,handle_time,handle_remark,create_time FROM alarm_record WHERE id=?
+==> Parameters: 15(Long)
+<==    Columns: id, alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, handler_id, handler_name, handle_time, handle_remark, create_time
+<==        Row: 15, AL1774741640343, 180, 113, 47, 2, max_grain_temp, 32.00, 30.00, 3, 最高粮温>30.00℃，当前值：32.00℃, 1, 1, 系统, 2026-03-29 07:47:20, 已确认，安排处理, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 180(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 180, GC_TEST_WH_1774741640314, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 113(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 113, 180, GC_TEST_BIN_1774741640314, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE id=?
+==> Parameters: 2(Long)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+✅ 报警处理成功
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a61d819]
+]]></system-out>
+  </testcase>
+  <testcase name="testCountUnhandled" classname="com.aegis.wms.application.graincondition.service.GrainConditionIntegrationTest" time="0.044">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+JDBC Connection [HikariProxyConnection@1682716048 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b76251c] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: GC_TEST_WH_1774741640402(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_WH_1774741640402(String), 粮情测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 181(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 181, GC_TEST_WH_1774741640402, 粮情测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 181(Long), GC_TEST_BIN_1774741640402(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 181(Long), GC_TEST_BIN_1774741640402(String), 粮情测试仓(String), 高大平房仓(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_threshold WHERE (threshold_code = ?)
+==> Parameters: GC_TEST_TH_1774741640402(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO alarm_threshold ( threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC_TEST_TH_1774741640402(String), 测试-最高粮温超28度(String), max_grain_temp(String), >(String), 28.00(BigDecimal), 2(Integer), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_record WHERE (warehouse_id = ? AND status = ?)
+==> Parameters: 181(Long), 0(Integer)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 114(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 114, 181, GC_TEST_BIN_1774741640402, 粮情测试仓, 高大平房仓, 1000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO grain_condition_record ( record_no, warehouse_id, bin_id, record_date, max_grain_temp, insect_level, data_source, operator_id, operator_name, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: GC1774741640422(String), 181(Long), 114(Long), 2026-03-29(LocalDate), 35.00(BigDecimal), NONE(String), manual(String), 1(Long), 系统(String), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+2026-03-29T07:47:20.425+08:00 DEBUG 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : KafkaTemplate未配置，跳过发送事件
+2026-03-29T07:47:20.425+08:00  INFO 78719 --- [           main] .a.g.s.i.GrainConditionRecordServiceImpl : 粮情记录创建成功，记录编号: GC1774741640422
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT id,record_no,warehouse_id,bin_id,record_date,outer_temp,outer_humidity,inner_temp,inner_humidity,max_grain_temp,min_grain_temp,avg_grain_temp,insect_level,insect_desc,o2_concentration,co2_concentration,moisture_content,remark,data_source,operator_id,operator_name,create_time,update_time FROM grain_condition_record WHERE id=?
+==> Parameters: 48(Long)
+<==    Columns: id, record_no, warehouse_id, bin_id, record_date, outer_temp, outer_humidity, inner_temp, inner_humidity, max_grain_temp, min_grain_temp, avg_grain_temp, insect_level, insect_desc, o2_concentration, co2_concentration, moisture_content, remark, data_source, operator_id, operator_name, create_time, update_time
+<==        Row: 48, GC1774741640422, 181, 114, 2026-03-29, null, null, null, null, 35.00, null, null, NONE, null, null, null, null, null, manual, 1, 系统, null, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+2026-03-29T07:47:20.427+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 开始检测粮情报警, recordId=48
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT id,threshold_code,threshold_name,metric_type,operator,threshold_value,alarm_level,status,remark,create_time,update_time FROM alarm_threshold WHERE (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: id, threshold_code, threshold_name, metric_type, operator, threshold_value, alarm_level, status, remark, create_time, update_time
+<==        Row: 1, MAX_GRAIN_TEMP_28, 最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, 最高粮温超过28℃触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 2, MAX_GRAIN_TEMP_30, 最高粮温超30度, max_grain_temp, >, 30.00, 3, 1, 最高粮温超过30℃触发紧急报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 3, AVG_GRAIN_TEMP_25, 平均粮温超25度, avg_grain_temp, >, 25.00, 1, 1, 平均粮温超过25℃触发提示, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 4, CO2_5000, CO2浓度超限, co2_concentration, >, 5.00, 2, 1, CO2浓度超过5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 5, O2_LOW, 氧气浓度过低, o2_concentration, <, 19.50, 2, 1, 氧气浓度低于19.5%触发报警, 2026-03-28 22:09:13, 2026-03-28 22:09:13
+<==        Row: 40, GC_TEST_TH_1774741640402, 测试-最高粮温超28度, max_grain_temp, >, 28.00, 2, 1, null, null, null
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640432(String), 181(Long), 114(Long), 48(Long), 1(Long), max_grain_temp(String), 35.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：35.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+2026-03-29T07:47:20.434+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 最高粮温超28度 > 28.00, 实际值: 35.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640434(String), 181(Long), 114(Long), 48(Long), 2(Long), max_grain_temp(String), 35.00(BigDecimal), 30.00(BigDecimal), 3(Integer), 最高粮温>30.00℃，当前值：35.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+2026-03-29T07:47:20.435+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 最高粮温超30度 > 30.00, 实际值: 35.00
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: INSERT INTO alarm_record ( alarm_no, warehouse_id, bin_id, record_id, threshold_id, metric_type, metric_value, threshold_value, alarm_level, alarm_content, status, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: AL1774741640435(String), 181(Long), 114(Long), 48(Long), 40(Long), max_grain_temp(String), 35.00(BigDecimal), 28.00(BigDecimal), 2(Integer), 最高粮温>28.00℃，当前值：35.00℃(String), 0(Integer), null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+2026-03-29T07:47:20.437+08:00  WARN 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警触发: 测试-最高粮温超28度 > 28.00, 实际值: 35.00
+2026-03-29T07:47:20.437+08:00  INFO 78719 --- [           main] c.a.w.a.g.s.impl.AlarmCheckServiceImpl   : 粮情报警检测完成, recordId=48
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM alarm_record WHERE (warehouse_id = ? AND status = ?)
+==> Parameters: 181(Long), 0(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+✅ 未处理报警统计成功，数量: 3
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2370c90]
+]]></system-out>
+  </testcase>
+</testsuite>

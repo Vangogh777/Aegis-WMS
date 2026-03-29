@@ -1,0 +1,7 @@
+com/aegis/wms/application/graincondition/service/GrainConditionIntegrationTest.class
+com/aegis/wms/application/masterdata/service/MasterDataIntegrationTest.class
+com/aegis/wms/application/masterdata/service/PositionServiceTest.class
+com/aegis/wms/application/inventory/service/InventoryIntegrationTest.class
+com/aegis/wms/application/masterdata/service/BinServiceTest.class
+com/aegis/wms/TestConfig.class
+com/aegis/wms/application/masterdata/service/WarehouseServiceTest.class

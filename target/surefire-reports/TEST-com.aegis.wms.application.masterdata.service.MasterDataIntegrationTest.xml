@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="1.085" tests="16" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/test-classes:/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/classes:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vangogh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vangogh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/vangogh/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/vangogh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/vangogh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/vangogh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vangogh/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.5/mybatis-plus-spring-boot3-starter-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus/3.5.5/mybatis-plus-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-core/3.5.5/mybatis-plus-core-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-annotation/3.5.5/mybatis-plus-annotation-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-extension/3.5.5/mybatis-plus-extension-3.5.5.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar:/Users/vangogh/.m2/repository/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis-spring/3.0.3/mybatis-spring-3.0.3.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/mybatis-plus-spring-boot-autoconfigure-3.5.5.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/vangogh/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/vangogh/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/vangogh/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/vangogh/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/vangogh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/vangogh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/vangogh/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/vangogh/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/vangogh/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/vangogh/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/vangogh/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/vangogh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/vangogh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/vangogh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/vangogh/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vangogh/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vangogh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/vangogh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/Users/vangogh/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/Users/vangogh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/vangogh/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/Users/vangogh/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/Users/vangogh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/vangogh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/vangogh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire/surefirebooter-20260329074708171_3.jar /Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire 2026-03-29T07-47-07_924-jvmRun1 surefire-20260329074708171_1tmp surefire_0-20260329074708171_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/test-classes:/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/classes:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/vangogh/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vangogh/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vangogh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vangogh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/vangogh/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/vangogh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/vangogh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/vangogh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/vangogh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vangogh/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.5/mybatis-plus-spring-boot3-starter-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus/3.5.5/mybatis-plus-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-core/3.5.5/mybatis-plus-core-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-annotation/3.5.5/mybatis-plus-annotation-3.5.5.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-extension/3.5.5/mybatis-plus-extension-3.5.5.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar:/Users/vangogh/.m2/repository/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar:/Users/vangogh/.m2/repository/org/mybatis/mybatis-spring/3.0.3/mybatis-spring-3.0.3.jar:/Users/vangogh/.m2/repository/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/mybatis-plus-spring-boot-autoconfigure-3.5.5.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/vangogh/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/vangogh/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/vangogh/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/vangogh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/vangogh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/vangogh/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/vangogh/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/vangogh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/vangogh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/vangogh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/vangogh/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/vangogh/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/vangogh/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/vangogh/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/vangogh/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/vangogh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/vangogh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/vangogh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/vangogh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vangogh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/vangogh/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vangogh/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vangogh/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vangogh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/vangogh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/vangogh/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/Users/vangogh/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/Users/vangogh/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/Users/vangogh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/Users/vangogh/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/vangogh/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/vangogh/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/Users/vangogh/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/Users/vangogh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/vangogh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/vangogh/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/vangogh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/vangogh"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/Users/vangogh/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储/target/surefire/surefirebooter-20260329074708171_3.jar"/>
+    <property name="user.script" value="Hans"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="20.0.1+9-29"/>
+    <property name="user.name" value="vangogh"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.6.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/vangogh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/bc/l2170sps3916y58v8pqvj5000000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="2"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="user.dir" value="/Users/vangogh/ClaudeCodeProject/Aegis-WMS神盾仓储"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="78719"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/vangogh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="20.0.1+9-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="testCreateWarehouse" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.051">
+    <system-out><![CDATA[2026-03-29T07:47:26.069+08:00  INFO 78719 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest]: MasterDataIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-29T07:47:26.223+08:00  INFO 78719 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.aegis.wms.AegisWmsApplication for test class com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa]
+JDBC Connection [HikariProxyConnection@1170460428 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_001(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_001(String), 测试粮库-集成测试(String), 测试地址-集成测试(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa]
+✅ 创建库区成功，ID: 191
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f4a89fa]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetWarehouseById" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.054">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+JDBC Connection [HikariProxyConnection@1267198524 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_QUERY(String), 测试查询粮库(String), 测试查询地址(String), 5000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 192(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 192, TEST_WH_QUERY, 测试查询粮库, 测试查询地址, 5000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+✅ 查询库区成功: 测试查询粮库
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10db002c]
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateWarehouse" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.099">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+JDBC Connection [HikariProxyConnection@1837746467 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_UPDATE(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_UPDATE(String), 更新前名称(String), 更新前地址(String), 3000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 193(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 193, TEST_WH_UPDATE, 更新前名称, 更新前地址, 3000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b] from current transaction
+==>  Preparing: UPDATE warehouse SET warehouse_code=?, warehouse_name=?, address=?, total_capacity=?, status=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: TEST_WH_UPDATE(String), 更新后名称-集成测试(String), 更新后地址(String), 8000.000(BigDecimal), 1(Integer), null, 193(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 193(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 193, TEST_WH_UPDATE, 更新后名称-集成测试, 更新后地址, 8000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+✅ 更新库区成功
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1835b24b]
+]]></system-out>
+  </testcase>
+  <testcase name="testListAllWarehouses" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.069">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+JDBC Connection [HikariProxyConnection@741295977 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_LIST_1(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_LIST_1(String), 列表测试粮库_1(String), 测试地址_1(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_LIST_2(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_LIST_2(String), 列表测试粮库_2(String), 测试地址_2(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_LIST_3(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_LIST_3(String), 列表测试粮库_3(String), 测试地址_3(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE deleted=0 ORDER BY create_time DESC
+==> Parameters: 
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 194, TEST_WH_LIST_1, 列表测试粮库_1, 测试地址_1, 1000.000, 1, null, null, 0
+<==        Row: 195, TEST_WH_LIST_2, 列表测试粮库_2, 测试地址_2, 1000.000, 1, null, null, 0
+<==        Row: 196, TEST_WH_LIST_3, 列表测试粮库_3, 测试地址_3, 1000.000, 1, null, null, 0
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+✅ 查询所有库区成功，数量: 3
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b0b20a8]
+]]></system-out>
+  </testcase>
+  <testcase name="testPageWarehouses" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.082">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+JDBC Connection [HikariProxyConnection@1079491260 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_10(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_10(String), 分页测试粮库_10(String), 分页测试地址_10(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_11(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_11(String), 分页测试粮库_11(String), 分页测试地址_11(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_12(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_12(String), 分页测试粮库_12(String), 分页测试地址_12(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_13(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_13(String), 分页测试粮库_13(String), 分页测试地址_13(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_14(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_14(String), 分页测试粮库_14(String), 分页测试地址_14(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_PAGE_15(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_PAGE_15(String), 分页测试粮库_15(String), 分页测试地址_15(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd] from current transaction
+==>  Preparing: SELECT COUNT(*) AS total FROM warehouse WHERE deleted = 0 AND (warehouse_name LIKE ? AND status = ?)
+==> Parameters: %分页测试%(String), 1(Integer)
+<==    Columns: total
+<==        Row: 6
+<==      Total: 1
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE deleted=0 AND (warehouse_name LIKE ? AND status = ?) ORDER BY create_time DESC LIMIT ?
+==> Parameters: %分页测试%(String), 1(Integer), 5(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 197, TEST_WH_PAGE_10, 分页测试粮库_10, 分页测试地址_10, 500.000, 1, null, null, 0
+<==        Row: 198, TEST_WH_PAGE_11, 分页测试粮库_11, 分页测试地址_11, 500.000, 1, null, null, 0
+<==        Row: 199, TEST_WH_PAGE_12, 分页测试粮库_12, 分页测试地址_12, 500.000, 1, null, null, 0
+<==        Row: 200, TEST_WH_PAGE_13, 分页测试粮库_13, 分页测试地址_13, 500.000, 1, null, null, 0
+<==        Row: 201, TEST_WH_PAGE_14, 分页测试粮库_14, 分页测试地址_14, 500.000, 1, null, null, 0
+<==      Total: 5
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+分页查询结果 - Total: 6, Records: 5
+✅ 分页查询库区成功，总数: 6, 当前页记录数: 5
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db9ecd]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateBin" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.03">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+JDBC Connection [HikariProxyConnection@1823288671 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_FOR_BIN(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_FOR_BIN(String), 仓房测试粮库(String), 仓房测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 203(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 203, TEST_WH_FOR_BIN, 仓房测试粮库, 仓房测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 203(Long), TEST_BIN_001(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 203(Long), TEST_BIN_001(String), 测试01仓(String), 高大平房仓(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+✅ 创建仓房成功，ID: 124
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a7a8e1e]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBinById" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.046">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+JDBC Connection [HikariProxyConnection@297120242 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_BIN_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_BIN_QUERY(String), 仓房查询测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 204(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 204, TEST_WH_BIN_QUERY, 仓房查询测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 204(Long), TEST_BIN_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 204(Long), TEST_BIN_QUERY(String), 查询测试仓(String), 浅圆仓(String), 300.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 125(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 125, 204, TEST_BIN_QUERY, 查询测试仓, 浅圆仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 204(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 204, TEST_WH_BIN_QUERY, 仓房查询测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+✅ 查询仓房成功，仓房: 查询测试仓, 所属库区: 仓房查询测试粮库
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58477355]
+]]></system-out>
+  </testcase>
+  <testcase name="testListBinsByWarehouseId" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.052">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+JDBC Connection [HikariProxyConnection@1862345909 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_BIN_LIST(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_BIN_LIST(String), 仓房列表测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 205(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 205, TEST_WH_BIN_LIST, 仓房列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 205(Long), TEST_BIN_LIST_1(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 205(Long), TEST_BIN_LIST_1(String), 列表测试仓_1(String), 高大平房仓(String), 200.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 205(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 205, TEST_WH_BIN_LIST, 仓房列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 205(Long), TEST_BIN_LIST_2(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 205(Long), TEST_BIN_LIST_2(String), 列表测试仓_2(String), 高大平房仓(String), 200.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 205(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 205, TEST_WH_BIN_LIST, 仓房列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 205(Long), TEST_BIN_LIST_3(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 205(Long), TEST_BIN_LIST_3(String), 列表测试仓_3(String), 高大平房仓(String), 200.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE deleted=0 AND (warehouse_id = ?) ORDER BY bin_code ASC
+==> Parameters: 205(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 126, 205, TEST_BIN_LIST_1, 列表测试仓_1, 高大平房仓, 200.000, 1, null, null, 0
+<==        Row: 127, 205, TEST_BIN_LIST_2, 列表测试仓_2, 高大平房仓, 200.000, 1, null, null, 0
+<==        Row: 128, 205, TEST_BIN_LIST_3, 列表测试仓_3, 高大平房仓, 200.000, 1, null, null, 0
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 205(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 205, TEST_WH_BIN_LIST, 仓房列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+✅ 根据库区查询仓房列表成功，数量: 3
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@282c3aa0]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreatePosition" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.036">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+JDBC Connection [HikariProxyConnection@18845028 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_FOR_POS(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_FOR_POS(String), 货位测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 206(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 206, TEST_WH_FOR_POS, 货位测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 206(Long), TEST_BIN_FOR_POS(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 206(Long), TEST_BIN_FOR_POS(String), 货位测试仓(String), 高大平房仓(String), 500.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 129(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 129, 206, TEST_BIN_FOR_POS, 货位测试仓, 高大平房仓, 500.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 129(Long), TEST_POS_001(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 129(Long), 206(Long), TEST_POS_001(String), 测试A区(String), 100.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+✅ 创建货位成功，ID: 83
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fe1a856]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPositionById" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.05">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+JDBC Connection [HikariProxyConnection@224238994 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_POS_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_POS_QUERY(String), 货位查询测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 207(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 207, TEST_WH_POS_QUERY, 货位查询测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 207(Long), TEST_BIN_POS_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 207(Long), TEST_BIN_POS_QUERY(String), 货位查询测试仓(String), 浅圆仓(String), 300.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 130(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 130, 207, TEST_BIN_POS_QUERY, 货位查询测试仓, 浅圆仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 130(Long), TEST_POS_QUERY(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 130(Long), 207(Long), TEST_POS_QUERY(String), 查询测试区(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT id,bin_id,warehouse_id,position_code,position_name,capacity,status,create_time,update_time,deleted FROM position WHERE id=? AND deleted=0
+==> Parameters: 84(Long)
+<==    Columns: id, bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time, deleted
+<==        Row: 84, 130, 207, TEST_POS_QUERY, 查询测试区, 50.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 130(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 130, 207, TEST_BIN_POS_QUERY, 货位查询测试仓, 浅圆仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 207(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 207, TEST_WH_POS_QUERY, 货位查询测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+✅ 查询货位成功，货位: 查询测试区, 所属仓房: TEST_BIN_POS_QUERY, 所属库区: 货位查询测试粮库
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c71d704]
+]]></system-out>
+  </testcase>
+  <testcase name="testListPositionsByBinId" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.052">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+JDBC Connection [HikariProxyConnection@816008967 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_POS_LIST(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_POS_LIST(String), 货位列表测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 208(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 208, TEST_WH_POS_LIST, 货位列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 208(Long), TEST_BIN_POS_LIST(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 208(Long), TEST_BIN_POS_LIST(String), 货位列表测试仓(String), 高大平房仓(String), 300.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 131(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 131, 208, TEST_BIN_POS_LIST, 货位列表测试仓, 高大平房仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 131(Long), TEST_POS_LIST_1(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 131(Long), 208(Long), TEST_POS_LIST_1(String), 列表测试区_1(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 131(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 131, 208, TEST_BIN_POS_LIST, 货位列表测试仓, 高大平房仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 131(Long), TEST_POS_LIST_2(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 131(Long), 208(Long), TEST_POS_LIST_2(String), 列表测试区_2(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 131(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 131, 208, TEST_BIN_POS_LIST, 货位列表测试仓, 高大平房仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 131(Long), TEST_POS_LIST_3(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 131(Long), 208(Long), TEST_POS_LIST_3(String), 列表测试区_3(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,bin_id,warehouse_id,position_code,position_name,capacity,status,create_time,update_time,deleted FROM position WHERE deleted=0 AND (bin_id = ?) ORDER BY position_code ASC
+==> Parameters: 131(Long)
+<==    Columns: id, bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time, deleted
+<==        Row: 85, 131, 208, TEST_POS_LIST_1, 列表测试区_1, 50.000, 1, null, null, 0
+<==        Row: 86, 131, 208, TEST_POS_LIST_2, 列表测试区_2, 50.000, 1, null, null, 0
+<==        Row: 87, 131, 208, TEST_POS_LIST_3, 列表测试区_3, 50.000, 1, null, null, 0
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 131(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 131, 208, TEST_BIN_POS_LIST, 货位列表测试仓, 高大平房仓, 300.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 208(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 208, TEST_WH_POS_LIST, 货位列表测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+✅ 根据仓房查询货位列表成功，数量: 3
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708ddfd3]
+]]></system-out>
+  </testcase>
+  <testcase name="testListCascade" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.057">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+JDBC Connection [HikariProxyConnection@632802556 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_CASCADE(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_CASCADE(String), 级联选择测试粮库(String), 测试地址(String), 10000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 209(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 209, TEST_WH_CASCADE, 级联选择测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 209(Long), TEST_BIN_CASCADE_1(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 209(Long), TEST_BIN_CASCADE_1(String), 级联测试仓1(String), 高大平房仓(String), 200.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 209(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 209, TEST_WH_CASCADE, 级联选择测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM bin WHERE deleted=0 AND (warehouse_id = ? AND bin_code = ?)
+==> Parameters: 209(Long), TEST_BIN_CASCADE_2(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: INSERT INTO bin ( warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 209(Long), TEST_BIN_CASCADE_2(String), 级联测试仓2(String), 浅圆仓(String), 200.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 132(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 132, 209, TEST_BIN_CASCADE_1, 级联测试仓1, 高大平房仓, 200.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 132(Long), TEST_POS_CASCADE_1A(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 132(Long), 209(Long), TEST_POS_CASCADE_1A(String), 级联测试区1A(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 133(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 133, 209, TEST_BIN_CASCADE_2, 级联测试仓2, 浅圆仓, 200.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM position WHERE deleted=0 AND (bin_id = ? AND position_code = ?)
+==> Parameters: 133(Long), TEST_POS_CASCADE_2A(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: INSERT INTO position ( bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 133(Long), 209(Long), TEST_POS_CASCADE_2A(String), 级联测试区2A(String), 50.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,bin_id,warehouse_id,position_code,position_name,capacity,status,create_time,update_time,deleted FROM position WHERE deleted=0 AND (warehouse_id = ? AND status = ?) ORDER BY position_code ASC
+==> Parameters: 209(Long), 1(Integer)
+<==    Columns: id, bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time, deleted
+<==        Row: 88, 132, 209, TEST_POS_CASCADE_1A, 级联测试区1A, 50.000, 1, null, null, 0
+<==        Row: 89, 133, 209, TEST_POS_CASCADE_2A, 级联测试区2A, 50.000, 1, null, null, 0
+<==      Total: 2
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? , ? ) AND deleted=0
+==> Parameters: 132(Long), 133(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 132, 209, TEST_BIN_CASCADE_1, 级联测试仓1, 高大平房仓, 200.000, 1, null, null, 0
+<==        Row: 133, 209, TEST_BIN_CASCADE_2, 级联测试仓2, 浅圆仓, 200.000, 1, null, null, 0
+<==      Total: 2
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 209(Long)
+<==    Columns: id, warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time, deleted
+<==        Row: 209, TEST_WH_CASCADE, 级联选择测试粮库, 测试地址, 10000.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,bin_id,warehouse_id,position_code,position_name,capacity,status,create_time,update_time,deleted FROM position WHERE deleted=0 AND (warehouse_id = ? AND bin_id = ? AND status = ?) ORDER BY position_code ASC
+==> Parameters: 209(Long), 132(Long), 1(Integer)
+<==    Columns: id, bin_id, warehouse_id, position_code, position_name, capacity, status, create_time, update_time, deleted
+<==        Row: 88, 132, 209, TEST_POS_CASCADE_1A, 级联测试区1A, 50.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 132(Long)
+<==    Columns: id, warehouse_id, bin_code, bin_name, bin_type, capacity, status, create_time, update_time, deleted
+<==        Row: 132, 209, TEST_BIN_CASCADE_1, 级联测试仓1, 高大平房仓, 200.000, 1, null, null, 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832] from current transaction
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+✅ 级联选择查询成功
+   - 按库区查询货位数: 2
+   - 按库区+仓房查询货位数: 1
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26350832]
+]]></system-out>
+  </testcase>
+  <testcase name="testDelete" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.062">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+JDBC Connection [HikariProxyConnection@28125426 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_DELETE(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_DELETE(String), 删除测试粮库(String), 测试地址(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e] from current transaction
+==>  Preparing: UPDATE warehouse SET deleted=1 WHERE id=? AND deleted=0
+==> Parameters: 210(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e] from current transaction
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 210(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+✅ 删除测试成功
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18a8a40e]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateWarehouseDuplicateCode" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.038">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+JDBC Connection [HikariProxyConnection@1189576631 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_DUP(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86] from current transaction
+==>  Preparing: INSERT INTO warehouse ( warehouse_code, warehouse_name, address, total_capacity, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: TEST_WH_DUP(String), 重复测试粮库1(String), 测试地址(String), 1000.000(BigDecimal), 1(Integer), null, null
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86] from current transaction
+==>  Preparing: SELECT COUNT( * ) AS total FROM warehouse WHERE deleted=0 AND (warehouse_code = ?)
+==> Parameters: TEST_WH_DUP(String)
+<==    Columns: total
+<==        Row: 1
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+✅ 编码重复异常测试通过
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b886e86]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateBinWarehouseNotFound" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.014">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5973d3ec]
+JDBC Connection [HikariProxyConnection@500238652 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT id,warehouse_code,warehouse_name,address,total_capacity,status,create_time,update_time,deleted FROM warehouse WHERE id=? AND deleted=0
+==> Parameters: 99999(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5973d3ec]
+✅ 库区不存在异常测试通过
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5973d3ec]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5973d3ec]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreatePositionBinNotFound" classname="com.aegis.wms.application.masterdata.service.MasterDataIntegrationTest" time="0.01">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24e63b9f]
+JDBC Connection [HikariProxyConnection@238049084 wrapping com.mysql.cj.jdbc.ConnectionImpl@17a89cb1] will be managed by Spring
+==>  Preparing: SELECT id,warehouse_id,bin_code,bin_name,bin_type,capacity,status,create_time,update_time,deleted FROM bin WHERE id=? AND deleted=0
+==> Parameters: 99999(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24e63b9f]
+✅ 仓房不存在异常测试通过
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24e63b9f]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24e63b9f]
+]]></system-out>
+  </testcase>
+</testsuite>
